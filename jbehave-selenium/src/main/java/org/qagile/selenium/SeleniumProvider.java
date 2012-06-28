@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.qagile.steps.MyDriver;
+import org.qagile.steps.PropertyWebdriver;
 
 public class SeleniumProvider {
 	
@@ -18,7 +19,7 @@ public class SeleniumProvider {
 	
 	@BeforeStory
 	public void createBrowser(){
-		driver = new MyDriver(new FirefoxDriver());
+		driver = new MyDriver(PropertyWebdriver.getDriver());
 	}
 	
 	@AfterStory

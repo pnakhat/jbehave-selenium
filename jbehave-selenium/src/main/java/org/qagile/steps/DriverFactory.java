@@ -7,7 +7,7 @@ public class DriverFactory {
 	private  WebDriver driver;
 	
 	public WebDriver createBrowser(){
-		driver = new MyDriver(new FirefoxDriver());
+		driver = new MyDriver(PropertyWebdriver.getDriver());
 		return driver;
 	}
 	
